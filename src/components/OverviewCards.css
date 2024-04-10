@@ -1,0 +1,48 @@
+.data-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0 20px 0;
+  }
+  
+  .card {
+    width: 70%;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 9px 11px 29.3px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .data-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 45px;
+  }
+  
+  .data-field .data-title,
+  .data-field .date {
+    color: #000;
+    font-family: "SUIT Medium";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+  
+  .data-field .count {
+    color: #0c2689;
+    font-family: "SUIT Medium";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 20px 0;
+  }
+  
+  .data-type img {
+    width: 100px;
+    height: 100px;
+  }
+  

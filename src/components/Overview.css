@@ -1,0 +1,43 @@
+body {
+  background: #f2f7fb;
+  height: 100vh;
+}
+
+.official-logo {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin: 50px 0 0 70px;
+}
+
+.official-logo h2 {
+  color: #000;
+  font-family: "SUIT Medium";
+  font-size: 21px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.official-logo img {
+  width: 55px;
+  height: 45px;
+}
+
+.head {
+  display: flex;
+  gap: 110px;
+  align-items: center;
+  margin: 50px 0 0 70px;
+}
+
+.head h3 {
+  color: #000;
+  font-family: "SUIT Medium";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.head img {
+  cursor: pointer;
+}
