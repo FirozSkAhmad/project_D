@@ -24,10 +24,7 @@ const Graphs = () => {
   let DCLdata;
   let OVdatasetKey;
   let OVData;
-  if (
-    data?.subOption === "YT_advt_videos" ||
-    data?.subOption === "FB_advt_video"
-  ) {
+  if (["YT_advt_videos", "FB_advt_video"].includes(data?.subOption)) {
     keys = Object.keys(Data).filter((key) => key.includes(`${data.option}`));
     filteredKeys = keys.filter((key) =>
       Data[key]["labels"].some((monthAndDate) => monthAndDate.includes(month))
@@ -67,7 +64,7 @@ const Graphs = () => {
     DCdata = Data[DCdatasetKey];
     DCLdata = Data[DCLdatasetKey];
     OVdatasetKey = `${data.option}_OverviewData_${month}`;
-    OVData = Data?.[OVdatasetKey];
+    OVData = Data[OVdatasetKey];
   }
 
   return (

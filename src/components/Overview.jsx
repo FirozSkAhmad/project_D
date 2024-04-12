@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import OffLogo from "../assets/official-logo.png";
 import Arrow from "../assets/arrow.svg";
 import OverviewCards from "./OverviewCards";
-import * as Data from "../data/data.js";
+import Data from "../data/data.js";
 
 const Overview = () => {
   const location = useLocation();
@@ -15,6 +15,7 @@ const Overview = () => {
   const OVdatasetKey = `${data.mainOption}_OverviewData_${month}`;
 
   const OVData = Data[OVdatasetKey];
+
 
   const navigate = useNavigate();
   return (
