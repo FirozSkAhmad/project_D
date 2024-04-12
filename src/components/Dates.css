@@ -54,8 +54,35 @@
   border: 1px solid #d9d9d9; /* Light grey border */
   border-radius: 4px; /* Rounded corners */
   position: absolute;
-  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+}
+
+.nn-dropdown-content {
+  background-color: #fff;
+  border: 1px solid #d9d9d9; /* Light grey border */
+  border-radius: 4px; /* Rounded corners */
+  position: absolute;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.nn-dropdown-content::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+.nn-dropdown-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the tracking area */
+}
+
+.nn-dropdown-content::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 2px solid #fff; /* creates padding around scroll thumb */
+}
+
+.nn-dropdown-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scroll thumb on hover */
 }
 
 .dropdown-item,
@@ -70,3 +97,6 @@
   background-color: #f9f9f9; /* Light grey background on hover */
 }
 
+.cards-wrapper {
+  transition: margin-top 0.3s ease;
+}

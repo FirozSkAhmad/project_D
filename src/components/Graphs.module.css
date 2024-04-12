@@ -76,17 +76,18 @@
 }
 
 /* Style for the fourth card to span the entire width */
-.graphCard:nth-child(4),
-.graphCard:nth-child(5),
-.graphCard:nth-child(6) {
+.graphCard:nth-child(1),
+.graphCard:nth-child(2),
+.graphCard:nth-child(3) {
   grid-column: 1 / -1; /* Span from the first to the last track */
   height: 60vh;
 }
 
 /* Additional style to ensure the empty cell is maintained */
-.graphCard:nth-child(3) {
-  grid-column: 1; /* Explicitly place the third item in the first column */
-}
+/* .graphCard:nth-child(3) {
+  grid-column: 1; 
+} */
+/* Explicitly place the third item in the first column */
 
 
 .data-area {

@@ -1,0 +1,51 @@
+.data-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 50px;
+}
+
+.info-card {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 9px 11px 29.3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 2vw;
+}
+
+.info-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.info-field .info-title,
+.info-field .info-count {
+  color: #000;
+  font-family: "SUIT Medium";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.info-field .count {
+  color: #0c2689;
+  font-family: "SUIT Medium";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 20px 0;
+}
+
+.info-image img {
+  width: 100px;
+  height: 100px;
+}
