@@ -61,7 +61,7 @@ const Dates = () => {
       FB_advt_video: ["Tailor_Girl", "Workers", "School_girl", "One_tap"],
       YT_advt_videos: [
         "28_March_Company_turn",
-        "28_March_Dr._student",
+        "28_March_Dr_student",
         "28_March_Tailor",
         "28_March_Working",
         "28_March_Hello_Ma",
