@@ -5,7 +5,7 @@ const Protected = ({ cmp }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (sessionStorage.getItem("login") === "true") {
+    if (sessionStorage.getItem("token")) {
       navigate("/home");
     } else {
       navigate("/login");

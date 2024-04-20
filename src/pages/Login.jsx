@@ -23,22 +23,47 @@ const Login = () => {
     });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    if (formData.emailId == "admin@gmail.com") {
-      if (formData.password == "12341234") {
-        sessionStorage.setItem("login", "true");
-        navigate("/home");
-        toast.success("Logined Successfully");
-      } else {
-        toast.error("Incorrect password");
-      }
-    } else {
-      toast.error("No user exists with given Email ID");
+    if (!formData.emailId || !formData.password ) {
+      alert("Fill all the required fields");
+      return;
     }
-    setLoader(false);
-  };
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify(formData);
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch(`${import.meta.env.VITE_BASE_URL}/user/login`, requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        if (result.status == 404 || result.status == 401) {
+          toast.error(result.message);
+        } else {
+          sessionStorage.setItem("token", result.data.accessToken);
+          sessionStorage.setItem("userRole", result.data.role_type);
+          toast.success("logined Successfully");
+          navigate("/home");
+        }
+        setLoader(false);
+      })
+      .catch((error) => {
+        console.log("error", error);
+        setLoader(false);
+      });
+  };  
+
 
   return (
     <>

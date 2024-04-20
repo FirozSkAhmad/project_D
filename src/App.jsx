@@ -2,11 +2,9 @@ import "./App.css";
 import React from "react";
 import { Outlet, createBrowserRouter, useLocation } from "react-router-dom";
 import Protected from "./components/Protected";
-import Graphs from "./components/Graphs";
 import Login from "./pages/Login";
-import Overview from "./components/Overview";
 import Header from "./components/Header";
-import Dates from "./components/Dates";
+import Home from "./components/Home";
 
 const App = () => {
   const location = useLocation();
@@ -37,17 +35,9 @@ const appRouter = createBrowserRouter([
         path: "/login",
       },
       {
-        element: <Protected cmp={<Dates />} />,
+        element: <Protected cmp={<Home />} />,
         path: "/home",
-      },
-      {
-        element: <Protected cmp={<Overview />} />,
-        path: "/overview",
-      },
-      {
-        element: <Protected cmp={<Graphs />} />,
-        path: "/graphs",
-      },
+      }
     ],
   },
 ]);
